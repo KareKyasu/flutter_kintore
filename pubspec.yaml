@@ -29,6 +29,9 @@ flutter:
     - family: Nato
       fonts:
         - asset: assets/fonts/NotoSerifJP-Light.otf
+    - family: MPLUS
+      fonts:
+        - asset: assets/fonts/MPLUSRounded1c-Regular.ttf
 
 
 flutter_icons:

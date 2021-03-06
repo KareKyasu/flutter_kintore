@@ -12,26 +12,29 @@ class CounterScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("筋トレ"),
       ),
-      body: Container(
-        margin: EdgeInsets.all(20.0),
-        child: Column(
-          children: <Widget>[
-            Text(kintoreModel.kintoreEntity?.date ?? ""),
-            Text("今日のノルマ"),
-            Text(kintoreModel.kintoreEntity?.quota.toString() ?? ""),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _ProgressCard(context, kintoreModel, "腕立て",
-                    kintoreModel.kintoreEntity?.doneUdetate.toString() ?? ""),
-                _ProgressCard(context, kintoreModel, "腹筋",
-                    kintoreModel.kintoreEntity?.doneFukkin.toString() ?? ""),
-              ],
-            ),
-            _TaskCard(
-                context, kintoreModel, "腕立て", kintoreModel.countUpUdetate),
-            _TaskCard(context, kintoreModel, "腹筋　", kintoreModel.countUpFukkin),
-          ],
+      body: SafeArea(
+        child: Container(
+          margin: EdgeInsets.all(20.0),
+          child: Column(
+            children: <Widget>[
+              Text(kintoreModel.kintoreEntity?.date ?? ""),
+              Text("今日のノルマ"),
+              Text(kintoreModel.kintoreEntity?.quota.toString() ?? ""),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _ProgressCard(context, kintoreModel, "足上げ",
+                      kintoreModel.kintoreEntity?.doneUdetate.toString() ?? ""),
+                  _ProgressCard(context, kintoreModel, "腹筋",
+                      kintoreModel.kintoreEntity?.doneFukkin.toString() ?? ""),
+                ],
+              ),
+              _TaskCard(
+                  context, kintoreModel, "腕立て", kintoreModel.countUpUdetate),
+              _TaskCard(
+                  context, kintoreModel, "腹筋　", kintoreModel.countUpFukkin),
+            ],
+          ),
         ),
       ),
     );
