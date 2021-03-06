@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+          fontFamily: 'Nato',
           colorScheme: ColorScheme.dark(),
           textTheme: ThemeData.dark().textTheme.copyWith(
                 bodyText1: TextStyle(
